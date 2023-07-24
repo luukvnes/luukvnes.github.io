@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid with Crossable Tiles</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 800px; /* Increased width for larger boxes */
+        }
+
+        .grid-item {
+            display: table;
+            width: 100%;
+            height: 150px; /* Increased height for larger boxes */
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px; /* Increased padding for better spacing */
+        }
+
+        .grid-item p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            overflow-wrap: break-word; /* Allow text to wrap */
+        }
+
+        .grid-item.crossed {
+            text-decoration: line-through;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const gridItems = document.querySelectorAll(".grid-item");
+
+            const strings = [
+                "Koreaanse K-pop kechs",
+                "Zielige kech met kind",
+                "Iemand zegt neuken in de keuken",
+                "Fake tits",
+                "Kinderen willen geld",
+                "Gucci",
+                "Vuurspuwer",
+                "Iemand maakt foto/video van ons",
+                "Oranje agent",
+                "Vietnam hoed",
+                "Manwijf",
+                "Eredivisie shirt",
+                "Aangeraakt door verkoper",
+                "Valpertij",
+                "Absolute 10",
+                "Extra entry 1",
+                "Extra entry 2",
+                "Extra entry 3",
+                "Extra entry 4",
+                "Extra entry 5"
+            ];
+
+            // Shuffle the strings array randomly
+            for (let i = strings.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [strings[i], strings[j]] = [strings[j], strings[i]];
+            }
+
+            gridItems.forEach((item, index) => {
+                item.addEventListener("click", () => {
+                    item.classList.toggle("crossed");
+                });
+
+                item.innerHTML = `<p>${strings[index]}</p>`;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="grid-container" id="grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+</body>
+</html>

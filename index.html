@@ -356,7 +356,7 @@ function startDownload(naamToCreate){
         if(x > 0){
 
             for(var i = 1; i< 7;i++){
-                dict[splitLine[i]][i] = splitLine[0]
+                dict[splitLine[i]][i-1] = splitLine[0]
             }
         }
 
@@ -375,8 +375,8 @@ function startDownload(naamToCreate){
     
             for (const [key, value] of Object.entries(list)) {
                console.log(key, value);
-               icseventlist.addEvent(value, 'This is the best day to demonstrate a single event.', 'New York', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year + "18:00");
-               icseventlist.addEvent(value, 'This is the best day to demonstrate a single event.', 'New York', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year+ "20:00");
+               icseventlist.addEvent(value, 'This is the best day to demonstrate a single event.', 'New York', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year + " 18:00");
+               icseventlist.addEvent(value, 'This is the best day to demonstrate a single event.', 'New York', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year+ " 20:00");
     
     
                icseventlist.addEvent()

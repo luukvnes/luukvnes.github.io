@@ -375,8 +375,8 @@ function startDownload(naamToCreate){
     
             for (const [key, value] of Object.entries(list)) {
                console.log(key, value);
-               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year);
-               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year);
+               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year + " 20:00");
+               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year + " 20:00");
     
     
                icseventlist.addEvent()

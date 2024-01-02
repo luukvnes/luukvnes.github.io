@@ -311,8 +311,8 @@ Vloer - 2	Taco			Sophie			Aniek			Elvis			Diede			HJ
 Douches	Sophie			HJ			Roti			Myrthe			Taco			Uzu			
 Woonkamer	Aniek			Myrthe			Diede			HJ			Elvis			Roti			`
 
-    var monthStart = 7
-    var year = 2023
+    var monthStart = 1
+    var year = 2024
 
     var monthdayDict = {
         1:"/31/",
@@ -375,8 +375,8 @@ Woonkamer	Aniek			Myrthe			Diede			HJ			Elvis			Roti			`
     
             for (const [key, value] of Object.entries(list)) {
                console.log(key, value);
-               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year + " 20:00");
-               icseventlist.addEvent(value.slice(4), 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year + " 20:00");
+               icseventlist.addEvent(value, 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + '/15/' + year,  '' + (parseInt(key) + monthStart) + '/15/' + year + " 20:00");
+               icseventlist.addEvent(value, 'Huistaakdag herinnering.', 'Pythagoraslaan 117A', '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year,  '' + (parseInt(key) + monthStart) + monthdayDict[(parseInt(key) + monthStart)] + year + " 20:00");
     
     
                icseventlist.addEvent()
